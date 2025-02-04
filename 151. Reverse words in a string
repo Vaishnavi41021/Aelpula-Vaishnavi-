@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+class Solution {
+    public String reverseWords(String s) {
+        // Trim leading/trailing spaces, and split the string by one or more spaces.
+        String[] arr = s.trim().split("\\s+");
+        
+        // Two pointers to reverse the array of words
+        int i = 0;
+        int j = arr.length - 1;
+        
+        // Reverse the array of words
+        while (i < j) {
+            String temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
+        }
+
+        // Join the words back into a single string with a single space separating them
+        return String.join(" ", arr);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        Solution sol = new Solution();
+        System.out.println(sol.reverseWords(s));
+        sc.close();
+    }
+}
