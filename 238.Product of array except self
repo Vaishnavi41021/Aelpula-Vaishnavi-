@@ -1,0 +1,44 @@
+import java.util.Scanner;
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int i;
+        int j;
+        int n=nums.length;
+        int prefproduct[]=new int[n];
+        int sufproduct[]=new int[n];
+
+        prefproduct[0]=1;
+         for(i=1;i<n;i++){
+           prefproduct[i] = nums[i - 1] * prefproduct[i - 1];
+         }
+
+        sufproduct[n-1]=1;
+         for(j=n-2;j>=0;j--){
+          sufproduct[j]=nums[j+1]*sufproduct[j+1];
+         }
+
+        int result[] = new int[i];
+         for(i=0;i<n;i++){
+                    result[i] = prefproduct[i] * sufproduct[i];
+
+         }
+         return  result;
+    }
+
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        sc.close();
+        Solution sol=new Solution();
+        int[] result=sol.productExceptSelf(arr);
+        for(int val:result){
+                System.out.print(val+"");
+            }
+   }
+}
