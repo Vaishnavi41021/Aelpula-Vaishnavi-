@@ -1,0 +1,34 @@
+import java.util.Scanner;
+class Solution {
+    public boolean increasingTriplet(int[] nums) {
+
+        int first = Integer.MAX_VALUE;  // Smallest number seen so far
+        int second = Integer.MAX_VALUE; // Second smallest number seen so far
+        
+        for (int num : nums) {
+            if (num <= first) {
+                first = num;  // Update the smallest number
+            } else if (num <= second) {
+                second = num; // Update the second smallest number
+            } else {
+                // If num is greater than both first and second, we found a triplet
+                return true;
+                
+            }        
+        
+        }
+        return false; 
+    }
+    public static void main(String [] args){
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int[] arr = new int[n];
+      for (int i = 0; i < n; i++) {
+         arr[i] = sc.nextInt();
+        }
+      sc.close();
+        Solution sol = new Solution();
+        boolean result= sol.increasingTriplet(arr);
+        System.out.println(result);
+    }
+}
