@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>Text to Speech Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="TTS.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="app-container">
+            <div class="headings-container">
+                <h1><i class="fa-solid fa-align-left"></i> Text to Speech Converter <i class="fa-solid fa-volume-high"></i></h1>
+                <h3>Enter Text and Convert into Speech</h3>
+            </div>
+
+            <div class="interaction-container">
+                <div>
+                    <textarea id="textToConvert" 
+                    placeholder="Enter text to convert into speech..." 
+                    id="" cols="35" rows="10" 
+                    class="text-control"></textarea>
+                </div>
+                <div>
+                    <p class="error-para"></p>
+                </div>
+                <div class="btn-container">
+                    <button class="btn" id="convertBtn"><i class="fa-solid fa-play"></i>
+                        Play Converted Sound
+                    </button>
+                    <button class="pauseBtn" id="pauseBtn"><i class="fa-solid fa-pause"></i> Pause</button>
+                    <button class="resumeBtn"id="resumeBtn"><i class="fa-solid fa-forward-step"></i> Resume</button>
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="TTS.js"></script>
+</body>
+
+</html>

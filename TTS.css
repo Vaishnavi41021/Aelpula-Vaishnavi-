@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(90deg,#10e2e9,#3b1cebf3);
+}
+
+.app-container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    font-family:serif;
+    font-size:20px;
+}
+
+.headings-container {
+    padding: 0 1rem;
+    font-family:serif;
+}
+.headings-container h1 span{
+    color:rgb(212,16,48);
+    font-family:serif;
+}
+
+.interaction-container {
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.text-control {
+    padding: 0.5rem;
+    margin: 2rem 0;
+    background-color:rgb(240, 250, 249);
+    color: #0e0001;
+    border: 1px solid #fafaf7;
+    border-radius: 10px;
+    font-family:serif;
+    width: 450px;
+}
+
+.text-control:focus-visible {
+    outline: none;
+}
+
+.error-para {
+    color: rgb(245, 236, 236);
+}
+
+.btn-container {
+    display: flex;
+}
+
+.btn {
+    padding: 0.8rem;
+    background-image: linear-gradient(90deg, #e0291c,rgb(236, 106, 83),rgb(218, 28, 28));
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #f5f3f3;
+    font-style:serif;
+    cursor: pointer;
+    transition: all 0.25s;
+    margin: 0px 5px;
+}
+
+.btn:hover {
+    padding: 1rem;
+}
+.pauseBtn{
+    padding: 0.8rem;
+    background-image: linear-gradient(90deg,#0e6308,rgb(79, 248, 84 ), #0e6308);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #073a03;
+    font-style:serif;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-align:center;
+    width: 150px;
+    margin: 0px 5px;
+
+}
+
+
+.pauseBtn:hover{
+    opacity: 1;
+
+}
+.resumeBtn{
+    padding: 0.8rem;
+    background-image: linear-gradient(90deg, #f8860b,rgb(241, 190, 102),rgb(247, 161, 14));
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #fa0d05;
+    font-style:serif;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-align:center;
+    width: 150px;
+    bottom:120px;
+    margin: 0px 5px;
+
+}
